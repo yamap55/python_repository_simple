@@ -1,0 +1,15 @@
+version: "3"
+services:
+  python_repository_simple:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        WORKDIR: /project
+    volumes:
+      - .:/project
+      - ${USERPROFILE-~}/.ssh:/home/vscode/.ssh
+    image: python_repository_simple-image
+    container_name: python_repository_simple-container
+    tty: true
+    env_file: .env # shellスクリプト内でも環境変数として使用するため

@@ -1,0 +1,16 @@
+[flake8]
+max-line-length=100
+# Rules to ignore:
+# D200 One-line docstring should fit on one line with quotes
+# D400 First line should end with a period
+# D401 First line should be in imperative mood
+# D403 First word of the first line should be properly capitalized
+# D413 Missing blank line after last section
+# W503 Line break occurred before a binary operator [ref]https://www.flake8rules.com/rules/W503.html
+ignore=D200,D400,D401,D403,D413,W503
+exclude=__init__.py,work
+per-file-ignores=tests/*:D
+max-complexity=10
+inline-quotes=double
+multiline-quotes=double
+docstring-quotes=double

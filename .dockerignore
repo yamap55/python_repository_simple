@@ -1,0 +1,7 @@
+.pytest_cache
+build
+dist
+work
+.coverage
+.git
+.devcontainer/
