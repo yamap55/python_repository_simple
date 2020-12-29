@@ -23,7 +23,6 @@
     "python.linting.lintOnSave": true,
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": ["--line-length", "100"],
-    "python.testing.pytestArgs": ["--verbose", "--showlocals"],
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestEnabled": true,
