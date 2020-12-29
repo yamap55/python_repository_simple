@@ -14,6 +14,7 @@
   "settings": {
     "files.eol": "\n",
     "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
     "terminal.integrated.shell.linux": "/bin/bash",
     "python.pythonPath": "/usr/local/bin/python",
     "python.linting.pylintEnabled": false,
