@@ -2,7 +2,7 @@
 
 ## 環境詳細
 
-- Python : 3.8.6
+- Python : 3.8.7
 
 ### 事前準備
 
@@ -16,7 +16,7 @@
   - `.devcontainer/devcontainer.json`
     - `name`, `service`
   - `docker-compose.yml`
-    - `services` のKey名
+    - `services` の Key 名
     - `image`, `container_name`
   - `README.md`
   - `LICENSE`
