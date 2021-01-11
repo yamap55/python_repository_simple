@@ -1,5 +1,17 @@
 # python_repository_simple
 
+本リポジトリはシンプルな Python 環境のテンプレートリポジトリです
+devcontainer の設定をしていますので、VSCode と Docker、Git さえあれば各種開発用設定が行われた Python の開発環境が構築され、即時開発が可能です
+GitHub のリポジトリページの「Use this template」を押下して使用してください
+
+## 内容
+
+- devcontainer
+- lint
+  - flake8, black, pyright
+- pytest
+- GitHub Actions
+
 ## 環境詳細
 
 - Python : 3.8.7
