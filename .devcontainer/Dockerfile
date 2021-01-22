@@ -12,6 +12,11 @@ WORKDIR ${WORKDIR}
 SHELL ["/bin/bash", "-c"]
 RUN chsh -s /bin/bash
 
+# Increase timeout for apt-get to 300 seconds
+RUN /bin/echo -e "\n\
+    Acquire::http::Timeout \"300\";\n\
+    Acquire::ftp::Timeout \"300\";" >> /etc/apt/apt.conf.d/99timeout
+
 # Configure apt and install packages
 RUN rm -rf /var/lib/apt/lists/* \
     && apt-get update \
@@ -43,11 +48,6 @@ RUN wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git
     source ~/.git-prompt.sh\n\
     export PS1='\\[\\e]0;\\u@\\h: \\w\\a\\]\${debian_chroot:+(\$debian_chroot)}\\[\\033[01;32m\\]\\u\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\[\\033[1;30m\\]\$(__git_ps1)\\[\\033[0m\\] \\$ '\n\
     " >>  /home/vscode/.bashrc
-
-# Increase timeout for apt-get to 300 seconds
-RUN /bin/echo -e "\n\
-    Acquire::http::Timeout \"300\";\n\
-    Acquire::ftp::Timeout \"300\";" >> /etc/apt/apt.conf.d/99timeout
 
 # pyright install
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
