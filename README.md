@@ -11,6 +11,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - flake8, black, pyright
 - pytest
 - GitHub Actions
+- logging
 
 ## 環境詳細
 
@@ -30,6 +31,9 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - `docker-compose.yml`
     - `services` の Key 名
     - `image`, `container_name`
+  - main.py
+  - logging.conf
+    - `hoge` を使用するモジュール名に合わせる
   - `README.md`
   - `LICENSE`
 
