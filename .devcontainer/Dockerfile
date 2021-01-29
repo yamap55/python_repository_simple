@@ -8,6 +8,11 @@ RUN echo $TZ > /etc/timezone
 ARG WORKDIR=/project
 WORKDIR ${WORKDIR}
 
+# Or your actual UID, GID on Linux if not the default 1000
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
 # change default shell
 SHELL ["/bin/bash", "-c"]
 RUN chsh -s /bin/bash
@@ -25,11 +30,6 @@ RUN rm -rf /var/lib/apt/lists/* \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
-
-# Or your actual UID, GID on Linux if not the default 1000
-ARG USERNAME=vscode
-ARG USER_UID=1000
-ARG USER_GID=$USER_UID
 
 # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
 RUN groupadd --gid $USER_GID $USERNAME \
