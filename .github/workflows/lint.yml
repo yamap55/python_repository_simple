@@ -31,6 +31,4 @@ jobs:
           node-version: 14.x
       - run: npm install --global pyright
       - name: Lint with pyright
-        run: |
-          npm install pyright
-          pyright
+        run: pyright
