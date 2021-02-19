@@ -23,3 +23,9 @@ jobs:
           pip install -r requirements.txt -r requirements-dev.txt
       - name: Lint with black
         run: black --check **/*.py
+      - name: Run black with review dog
+        uses: reviewdog/action-black@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-check
+          fail_on_error: true
