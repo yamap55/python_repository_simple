@@ -1,13 +1,13 @@
-name: lint
+name: flake8
 
 on: [push]
 
 jobs:
-  lint:
+  flake8:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.8
+      - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.8
@@ -21,14 +21,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt -r requirements-dev.txt
-      - name: Lint with flake8
-        run: flake8
-      - name: Lint with black
-        run: black --check **/*.py
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - name: Run flake8 with review dog
+        uses: reviewdog/action-flake8@v3
         with:
-          node-version: 14.x
-      - run: npm install --global pyright
-      - name: Lint with pyright
-        run: pyright
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-check
+          fail_on_error: true
