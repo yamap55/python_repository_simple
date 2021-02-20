@@ -56,12 +56,5 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
 
 RUN pip install -U pip
 
-# copy requirements files
-COPY ./requirements.txt /tmp/requirements.txt
-COPY ./requirements-dev.txt /tmp/requirements-dev.txt
-
-# library install
-RUN pip install -r /tmp/requirements.txt -r /tmp/requirements-dev.txt
-
 ENV DEBIAN_FRONTEND=
 CMD ["/bin/bash"]

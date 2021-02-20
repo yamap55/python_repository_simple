@@ -57,5 +57,6 @@
     "eamodio.gitlens",
     "ms-python.vscode-pylance",
     "VisualStudioExptTeam.vscodeintellicode"
-  ]
+  ],
+  "postCreateCommand": "pip install -r requirements.txt -r requirements-dev.txt"
 }
