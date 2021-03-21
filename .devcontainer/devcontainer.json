@@ -56,7 +56,8 @@
     "njpwerner.autodocstring",
     "eamodio.gitlens",
     "ms-python.vscode-pylance",
-    "VisualStudioExptTeam.vscodeintellicode"
+    "VisualStudioExptTeam.vscodeintellicode",
+    "exiasr.hadolint"
   ],
   "postCreateCommand": "pip install -r requirements.txt -r requirements-dev.txt"
 }
