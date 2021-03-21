@@ -6,12 +6,15 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 
 ## 内容
 
-- devcontainer
+- [devcontainer](https://code.visualstudio.com/docs/remote/containers)
 - lint
-  - flake8, black, pyright
-- pytest
-- GitHub Actions
-- logging
+  - [flake8](https://flake8.pycqa.org/en/latest/)
+  - [black](https://black.readthedocs.io/en/stable/)
+  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
+  - [hadolint](https://github.com/hadolint/hadolint)
+- [pytest](https://docs.pytest.org/en/stable/)
+- [GitHub Actions](https://github.co.jp/features/actions)
+- [logging](https://docs.python.org/ja/3/howto/logging.html)
 
 ## 環境詳細
 
