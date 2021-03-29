@@ -1,0 +1,5 @@
+ignored:
+  - DL3005 # error: Do not use apt-get upgrade or dist-upgrade (DL3005) ref. https://github.com/hadolint/hadolint/issues/562
+  - DL3008 # warning: Pin versions in apt get install. Instead of `apt-get install <package>` use `apt-get install <package>=<version>`
+  - DL3016 # warning: Pin versions in npm. Instead of `npm install <package>` use `npm install <package>@<version>`
+  - DL4001 # warning: Either use Wget or Curl but not both
