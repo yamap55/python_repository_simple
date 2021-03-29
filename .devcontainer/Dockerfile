@@ -25,6 +25,7 @@ RUN /bin/echo -e "\n\
 # Configure apt and install packages
 RUN rm -rf /var/lib/apt/lists/* \
     && apt-get update \
+    && apt-get upgrade -y \
     && apt-get -y --no-install-recommends install sudo vim tzdata less \
     && apt-get autoremove -y \
     && apt-get clean -y \
