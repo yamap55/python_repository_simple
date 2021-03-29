@@ -25,6 +25,7 @@ RUN /bin/echo -e "\n\
 # Configure apt and install packages
 RUN rm -rf /var/lib/apt/lists/* \
     && apt-get update \
+    && apt-get upgrade -y \
     && apt-get -y --no-install-recommends install sudo vim tzdata less \
     && apt-get autoremove -y \
     && apt-get clean -y \
@@ -38,8 +39,8 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 # terminal setting
-RUN wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /home/vscode/.git-completion.bash \
-    && wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O /home/vscode/.git-prompt.sh \
+RUN wget --progress=dot:giga https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O /home/vscode/.git-completion.bash \
+    && wget --progress=dot:giga https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -O /home/vscode/.git-prompt.sh \
     && chmod a+x /home/vscode/.git-completion.bash \
     && chmod a+x /home/vscode/.git-prompt.sh \
     && echo -e "\n\
@@ -49,7 +50,7 @@ RUN wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git
     " >>  /home/vscode/.bashrc
 
 # install hadolint
-RUN wget https://github.com/hadolint/hadolint/releases/download/v1.22.1/hadolint-Linux-x86_64 -O /usr/local/bin/hadolint \
+RUN wget --progress=dot:giga https://github.com/hadolint/hadolint/releases/download/v2.0.0/hadolint-Linux-x86_64 -O /usr/local/bin/hadolint \
     && chmod +x /usr/local/bin/hadolint
 
 # pyright install
