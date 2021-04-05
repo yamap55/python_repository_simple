@@ -7,7 +7,7 @@
   "reportUnusedFunction": true,
   "reportUnusedVariable": true,
   "reportDuplicateImport": true,
-  "pythonVersion": "3.8",
+  "pythonVersion": "3.9",
   "pythonPlatform": "Linux",
   "ignore": ["./work"]
 }
