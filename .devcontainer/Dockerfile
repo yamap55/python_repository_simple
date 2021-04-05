@@ -1,5 +1,4 @@
-ARG PYTHON_VERSION=3.8.8
-FROM python:${PYTHON_VERSION}
+FROM python:3.9.4
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Tokyo
