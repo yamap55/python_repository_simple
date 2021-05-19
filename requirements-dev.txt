@@ -9,4 +9,4 @@ pytest==6.2.4
 pytest-cov==2.12.0
 
 # notebook
-ipykernel==5.5.4
+ipykernel==5.5.5
