@@ -18,7 +18,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 
 ## 環境詳細
 
-- Python : 3.9.4
+- Python : 3.9.6
 
 ### 事前準備
 
