@@ -39,6 +39,9 @@ GitHub のリポジトリページの「Use this template」を押下して使�
     - `hoge` を使用するモジュール名に合わせる
   - `README.md`
   - `LICENSE`
+  - dependabot
+    - `.github/dependabot.yml`
+    - `.github/workflows/auto_approve.yml`
 
 ### 開発手順
 
