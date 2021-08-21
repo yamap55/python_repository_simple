@@ -34,6 +34,8 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - `docker-compose.yml`
     - `services` の Key 名
     - `image`, `container_name`
+    - `env_file`
+      - 環境変数を使用しない場合は除去
   - main.py
   - logging.conf
     - `hoge` を使用するモジュール名に合わせる
