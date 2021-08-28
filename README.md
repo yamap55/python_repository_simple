@@ -43,7 +43,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - `LICENSE`
   - dependabot
     - `.github/dependabot.yml`
-    - `.github/workflows/auto_approve.yml`
+    - `.github/workflows/auto_merge_depandabot.yml`
 
 ### 開発手順
 
