@@ -63,5 +63,5 @@
     "VisualStudioExptTeam.vscodeintellicode",
     "exiasr.hadolint"
   ],
-  "postCreateCommand": "pip install -r requirements.txt -r requirements-dev.txt"
+  "postAttachCommand": "pip install -r requirements.txt -r requirements-dev.txt"
 }
