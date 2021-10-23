@@ -16,5 +16,8 @@ updates:
     directory: "/.devcontainer"
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: "python"
+        versions: ["~>3.10.0"]
     reviewers:
       - "yamap55"
