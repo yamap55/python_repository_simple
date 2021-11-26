@@ -58,7 +58,6 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -143,5 +142,6 @@ Thumbs.db
 # vscode
 .vscode/settings.json
 
-# logs
-logs
+# log
+*.log.*
+*.log
