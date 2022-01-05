@@ -61,7 +61,8 @@
     "eamodio.gitlens",
     "ms-python.vscode-pylance",
     "VisualStudioExptTeam.vscodeintellicode",
-    "exiasr.hadolint"
+    "exiasr.hadolint",
+    "bungcip.better-toml"
   ],
-  "postStartCommand": "pip install -U pip && pip install -r requirements.txt -r requirements-dev.txt"
+  "postStartCommand": "pip install -U pip && poetry self update && poetry install"
 }
