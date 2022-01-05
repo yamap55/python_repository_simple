@@ -26,3 +26,6 @@ ipykernel = "6.6.1"
 [tool.pytest.ini_options]
 junit_family = "xunit1"
 addopts = "--verbose --cov --showlocals --durations=5"
+
+[tool.coverage.run]
+omit = ["*/tests/*", "*/site-packages/*"]
