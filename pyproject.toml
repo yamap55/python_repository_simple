@@ -22,3 +22,7 @@ pytest-cov = "3.0.0"
 
 # notebook
 ipykernel = "6.6.1"
+
+[tool.pytest.ini_options]
+junit_family = "xunit1"
+addopts = "--verbose --cov --showlocals --durations=5"
