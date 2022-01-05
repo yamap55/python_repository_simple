@@ -13,6 +13,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
   - [hadolint](https://github.com/hadolint/hadolint)
 - [pytest](https://docs.pytest.org/en/stable/)
+- [poetry](https://python-poetry.org/)
 - [GitHub Actions](https://github.co.jp/features/actions)
 - [logging](https://docs.python.org/ja/3/howto/logging.html)
 
@@ -44,6 +45,8 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - dependabot
     - `.github/dependabot.yml`
     - `.github/workflows/auto_merge_depandabot.yml`
+  - pyproject.toml
+    - `tool.poetry.name`, `tool.poetry.description`, `tool.poetry.authors`
 
 ### 開発手順
 
