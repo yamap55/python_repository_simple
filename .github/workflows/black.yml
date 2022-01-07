@@ -3,10 +3,8 @@ name: black
 on: [push]
 
 jobs:
-  python_setup:
-    uses: yamap55/python_repository_simple/.github/workflows/_python_setup.yml@update/reusing_workflows
   black:
-    runs-on: ubuntu-latest
+    uses: yamap55/python_repository_simple/.github/workflows/_python_setup.yml@update/reusing_workflows
     steps:
       # - uses: ./.github/workflows/_python_setup.yml@update/reusing_workflows
       # - uses: actions/checkout@v2
