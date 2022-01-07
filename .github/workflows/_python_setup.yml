@@ -1,10 +1,10 @@
-name: pyright
+name: python setup
 
 on:
   workflow_call:
 
 jobs:
-  pyright:
+  python_setup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
