@@ -1,0 +1,26 @@
+inputs:
+  python-version:
+    required: false
+    default: 3.9
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ inputs.python-version }}
+    - name: Install Poetry
+      uses: snok/install-poetry@v1.3
+      with:
+        virtualenvs-create: false
+    - uses: actions/cache@v2
+      id: cached-poetry-dependencies
+      with:
+        path: ~/.cache/pypoetry
+        key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-poetry-
+    - name: Install dependencies
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      run: poetry install --no-interaction
+      shell: bash
