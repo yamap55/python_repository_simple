@@ -15,7 +15,4 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Test with pytest
-        run: poetry run pytest
-      - name: Debug
-        if: ${{ always() }}
-        uses: mxschmitt/action-tmate@v3
+        run: pytest
