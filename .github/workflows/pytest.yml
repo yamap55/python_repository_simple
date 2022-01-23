@@ -14,8 +14,10 @@ jobs:
         uses: ./.github/actions/python_setup
         with:
           python-version: ${{ matrix.python-version }}
+      - name: activate
+        run: source .venv/bin/activate
       - name: Test with pytest
         run: pytest
-      - name: Debug
-        if: ${{ always() }}
-        uses: mxschmitt/action-tmate@v3
+      # - name: Debug
+      #   if: ${{ always() }}
+      #   uses: mxschmitt/action-tmate@v3
