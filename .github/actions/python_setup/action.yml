@@ -24,3 +24,4 @@ runs:
       shell: bash
     - name: activate
       run: source .venv/bin/activate
+      shell: bash
