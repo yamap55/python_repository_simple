@@ -8,7 +8,7 @@ max-line-length=100
 # D413 Missing blank line after last section
 # W503 Line break occurred before a binary operator [ref]https://www.flake8rules.com/rules/W503.html
 ignore=D200,D400,D401,D403,D413,W503
-exclude=__init__.py,work
+exclude=__init__.py,work,.venv,.git
 per-file-ignores=tests/*:D
 max-complexity=10
 inline-quotes=double
