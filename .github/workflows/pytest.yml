@@ -14,5 +14,9 @@ jobs:
         uses: ./.github/actions/python_setup
         with:
           python-version: ${{ matrix.python-version }}
+      - name: set up poetry
+        uses: ./.github/actions/poetry_setup
       - name: Test with pytest
-        run: poetry run pytest
+        run: |
+          source .venv/bin/activate
+          pytest
