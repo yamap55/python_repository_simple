@@ -22,6 +22,6 @@ runs:
       if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
       run: poetry install --no-interaction
       shell: bash
-    - name: activate
-      run: source .venv/bin/activate
-      shell: bash
+    # - name: activate
+    #   run: source .venv/bin/activate
+    #   shell: bash
