@@ -18,6 +18,6 @@ jobs:
         run: source .venv/bin/activate
       - name: Test with pytest
         run: pytest
-      - name: Debug
-        if: ${{ always() }}
-        uses: mxschmitt/action-tmate@v3
+      # - name: Debug
+      #   if: ${{ always() }}
+      #   uses: mxschmitt/action-tmate@v3
