@@ -6,7 +6,7 @@ jobs:
   flake8:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: set up python
         uses: ./.github/actions/python_setup
       - uses: actions/cache@v2
