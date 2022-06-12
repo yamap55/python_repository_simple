@@ -3,7 +3,7 @@ name = "python_repository_simple"
 version = "0.0.0"
 description = "python_repository_simple"
 authors = ["yamap55"]
-license = "MIT"
+license = "Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
 
 [tool.poetry.dependencies]
 python = "^3.7"
