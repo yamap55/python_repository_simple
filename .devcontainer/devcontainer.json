@@ -62,7 +62,8 @@
     "ms-python.vscode-pylance",
     "VisualStudioExptTeam.vscodeintellicode",
     "exiasr.hadolint",
-    "bungcip.better-toml"
+    "bungcip.better-toml",
+    "usernamehw.errorlens"
   ],
   "postStartCommand": "pip install -U pip && poetry self update && poetry install --no-interaction"
 }
