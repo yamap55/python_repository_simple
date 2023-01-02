@@ -8,7 +8,6 @@ services:
         WORKDIR: /project
     volumes:
       - .:/project
-      - ${USERPROFILE-~}/.ssh:/home/vscode/.ssh
     image: python_repository_simple-image
     container_name: python_repository_simple-container
     tty: true
