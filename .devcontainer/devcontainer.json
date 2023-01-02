@@ -20,7 +20,7 @@
         "path": "/bin/bash"
       }
     },
-    "python.pythonPath": "/usr/local/bin/python",
+    "python.pythonPath": "/project/.venv/bin/python",
     "python.linting.pylintEnabled": false,
     "python.linting.enabled": true,
     "python.linting.flake8Enabled": true,
