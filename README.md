@@ -29,6 +29,8 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 - 本リポジトリの clone
 - `.env` ファイルを空ファイルでプロジェクト直下に作成
+- ssh-agent の設定
+  - https://code.visualstudio.com/docs/devcontainers/containers#_using-a-credential-helper
 - 以下をプロジェクト名に合わせて変更
   - `.devcontainer/devcontainer.json`
     - `name`, `service`
