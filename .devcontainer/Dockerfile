@@ -51,7 +51,7 @@ USER $USERNAME
 ENV PATH "/home/$USERNAME/.poetry/bin:$PATH"
 
 # poetry install
-ENV POETRY_VIRTUALENVS_CREATE=false
+ENV POETRY_VIRTUALENVS_IN_PROJECT=true
 RUN curl -sSL https://install.python-poetry.org | python -
 
 # terminal setting
