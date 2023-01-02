@@ -1,7 +1,7 @@
 inputs:
   python-version:
     required: false
-    default: 3.10
+    default: "3.10"
 runs:
   using: "composite"
   steps:
