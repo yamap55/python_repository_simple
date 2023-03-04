@@ -60,6 +60,8 @@ RUN wget --progress=dot:giga https://raw.githubusercontent.com/git/git/master/co
     && chmod a+x ~/.git-completion.bash \
     && chmod a+x ~/.git-prompt.sh \
     && echo -e "\n\
+    export VIRTUAL_ENV_DISABLE_PROMPT=1\n\
+    export PROMPT_COMMAND='echo -n \\$(tput setaf 5)\\$(date +%H:%M:%S)\$(tput sgr0)\ '\n\
     source ~/.git-completion.bash\n\
     source ~/.git-prompt.sh\n\
     export PS1='\\[\\e]0;\\u@\\h: \\w\\a\\]\${debian_chroot:+(\$debian_chroot)}\\[\\033[01;32m\\]\\u\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\[\\033[1;30m\\]\$(__git_ps1)\\[\\033[0m\\] \\$ '\n\
