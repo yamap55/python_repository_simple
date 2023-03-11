@@ -63,7 +63,8 @@
         "VisualStudioExptTeam.vscodeintellicode",
         "exiasr.hadolint",
         "bungcip.better-toml",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "charliermarsh.ruff"
       ]
     }
   },
