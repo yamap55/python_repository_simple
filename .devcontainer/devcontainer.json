@@ -39,10 +39,12 @@
         "vsintellicode.modify.editor.suggestSelection": "enabled",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-          "source.organizeImports": false
+          "source.organizeImports": false,
+          "source.fixAll": true
         },
         "[python]": {
-          "editor.tabSize": 4
+          "editor.tabSize": 4,
+          "editor.formatOnPaste": false
         },
         "[json]": {
           "editor.tabSize": 2
