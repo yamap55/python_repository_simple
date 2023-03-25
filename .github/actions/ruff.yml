@@ -1,5 +1,5 @@
 runner:
   ruff:
-    cmd: source .venv/bin/activate && ruff check . 2> /dev/null
+    cmd: poetry run ruff check . 2> /dev/null
     errorformat:
       - "%f:%l:%c: %m"
