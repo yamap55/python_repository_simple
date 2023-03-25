@@ -1,0 +1,5 @@
+runner:
+  flutter:
+    cmd: ruff check . 2> /dev/null
+    errorformat:
+      - "%f:%l:%c: %m"
