@@ -10,11 +10,7 @@ python = "^3.7"
 
 [tool.poetry.dev-dependencies]
 # lint
-flake8 = "5.0.4"
 black = "23.1.0"
-flake8-docstrings = "1.7.0"
-flake8-quotes = "3.3.2"
-flake8-bugbear = "23.2.13"
 ruff = "^0.0.254"
 
 # test
@@ -51,3 +47,8 @@ exclude = ["__init__.py", "work", ".venv", ".git"]
 
 [tool.ruff.mccabe]
 max-complexity = 10
+
+[tool.ruff.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
