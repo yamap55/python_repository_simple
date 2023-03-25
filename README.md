@@ -8,7 +8,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 
 - [devcontainer](https://code.visualstudio.com/docs/remote/containers)
 - lint
-  - [flake8](https://flake8.pycqa.org/en/latest/)
+  - [ruff](https://beta.ruff.rs/docs/)
   - [black](https://black.readthedocs.io/en/stable/)
   - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
   - [hadolint](https://github.com/hadolint/hadolint)
