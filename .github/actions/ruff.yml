@@ -3,3 +3,4 @@ runner:
     cmd: poetry run ruff check . 2> /dev/null
     errorformat:
       - "%f:%l:%c: %m"
+      - "%-G%.%#"
