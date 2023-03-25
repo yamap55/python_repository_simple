@@ -23,8 +23,7 @@
         "python.pythonPath": "/project/.venv/bin/python",
         "python.linting.pylintEnabled": false,
         "python.linting.enabled": true,
-        "python.linting.flake8Enabled": true,
-        "python.linting.flake8Args": ["--config=.flake8"],
+        "python.linting.flake8Enabled": false,
         "python.linting.lintOnSave": true,
         "python.formatting.provider": "black",
         "python.formatting.blackArgs": ["--line-length", "100"],
@@ -35,15 +34,18 @@
         "python.jediEnabled": false,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
+        "ruff.showNotifications": "always",
         "vsintellicode.python.completionsEnabled": true,
         "vsintellicode.features.python.deepLearning": "enabled",
         "vsintellicode.modify.editor.suggestSelection": "enabled",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-          "source.organizeImports": true
+          "source.organizeImports": false,
+          "source.fixAll": true
         },
         "[python]": {
-          "editor.tabSize": 4
+          "editor.tabSize": 4,
+          "editor.formatOnPaste": false
         },
         "[json]": {
           "editor.tabSize": 2
@@ -63,7 +65,8 @@
         "VisualStudioExptTeam.vscodeintellicode",
         "exiasr.hadolint",
         "bungcip.better-toml",
-        "usernamehw.errorlens"
+        "usernamehw.errorlens",
+        "charliermarsh.ruff"
       ]
     }
   },
