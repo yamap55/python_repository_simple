@@ -23,8 +23,7 @@
         "python.pythonPath": "/project/.venv/bin/python",
         "python.linting.pylintEnabled": false,
         "python.linting.enabled": true,
-        "python.linting.flake8Enabled": true,
-        "python.linting.flake8Args": ["--config=.flake8"],
+        "python.linting.flake8Enabled": false,
         "python.linting.lintOnSave": true,
         "python.formatting.provider": "black",
         "python.formatting.blackArgs": ["--line-length", "100"],
@@ -40,7 +39,7 @@
         "vsintellicode.modify.editor.suggestSelection": "enabled",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
-          "source.organizeImports": true
+          "source.organizeImports": false
         },
         "[python]": {
           "editor.tabSize": 4
