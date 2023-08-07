@@ -20,13 +20,9 @@
             "path": "/bin/bash"
           }
         },
+        "black-formatter.args": ["--line-length", "100"],
+        "flake8.args": ["--config=.flake8"],
         "python.pythonPath": "/project/.venv/bin/python",
-        "python.linting.pylintEnabled": false,
-        "python.linting.enabled": true,
-        "python.linting.flake8Enabled": false,
-        "python.linting.lintOnSave": true,
-        "python.formatting.provider": "black",
-        "python.formatting.blackArgs": ["--line-length", "100"],
         "python.testing.unittestEnabled": false,
         "python.testing.nosetestsEnabled": false,
         "python.testing.pytestEnabled": true,
@@ -66,7 +62,9 @@
         "exiasr.hadolint",
         "tamasfe.even-better-toml",
         "usernamehw.errorlens",
-        "charliermarsh.ruff"
+        "charliermarsh.ruff",
+        "ms-python.flake8",
+        "ms-python.black-formatter"
       ]
     }
   },
