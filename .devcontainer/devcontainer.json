@@ -64,7 +64,7 @@
         "ms-python.vscode-pylance",
         "VisualStudioExptTeam.vscodeintellicode",
         "exiasr.hadolint",
-        "bungcip.better-toml",
+        "tamasfe.even-better-toml",
         "usernamehw.errorlens",
         "charliermarsh.ruff"
       ]
