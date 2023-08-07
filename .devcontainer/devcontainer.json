@@ -2,7 +2,7 @@
 {
   "name": "Python Repository Simple",
   // Use docker-compose.extend.yml to run a command that keeps the container running.
-  "dockerComposeFile": ["./docker-compose.yml"],
+  "dockerComposeFile": ["./compose.yaml"],
   "service": "python_repository_simple",
   "workspaceFolder": "/project",
   "shutdownAction": "stopCompose",
