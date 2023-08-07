@@ -34,7 +34,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 - 以下をプロジェクト名に合わせて変更
   - `.devcontainer/devcontainer.json`
     - `name`, `service`
-  - `docker-compose.yml`
+  - `compose.yaml`
     - `services` の Key 名
     - `image`, `container_name`
     - `env_file`
