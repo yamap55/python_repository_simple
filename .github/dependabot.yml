@@ -18,6 +18,6 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "python"
-        versions: [">=3.11.0"]
+        versions: [">=3.12.0"]
     reviewers:
       - "yamap55"
