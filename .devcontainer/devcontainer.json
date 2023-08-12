@@ -65,7 +65,8 @@
         "usernamehw.errorlens",
         "charliermarsh.ruff",
         "ms-python.flake8",
-        "ms-python.black-formatter"
+        "ms-python.black-formatter",
+        "GitHub.copilot"
       ]
     }
   },
