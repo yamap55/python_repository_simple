@@ -6,7 +6,7 @@ authors = ["yamap55 <1785817+yamap55@users.noreply.github.com>"]
 license = "Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 # lint
