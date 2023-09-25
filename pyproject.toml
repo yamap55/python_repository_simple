@@ -11,7 +11,7 @@ python = "^3.9"
 [tool.poetry.group.dev.dependencies]
 # lint
 black = "23.3.0"
-ruff = "^0.0.290"
+ruff = "^0.0.291"
 
 # test
 pytest = "7.4.2"
