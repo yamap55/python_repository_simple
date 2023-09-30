@@ -22,6 +22,7 @@
         },
         "black-formatter.args": ["--line-length", "100"],
         "flake8.args": ["--config=.flake8"],
+        "python.defaultInterpreterPath": "/project/.venv/bin/python",
         "python.pythonPath": "/project/.venv/bin/python",
         "python.testing.unittestEnabled": false,
         "python.testing.nosetestsEnabled": false,
