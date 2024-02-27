@@ -18,7 +18,7 @@ pytest = "8.0.2"
 pytest-cov = "4.1.0"
 
 # notebook
-ipykernel = "6.29.2"
+ipykernel = "6.29.3"
 
 [tool.pytest.ini_options]
 junit_family = "xunit1"
