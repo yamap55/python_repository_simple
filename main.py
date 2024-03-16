@@ -1,4 +1,5 @@
 """main"""
+
 from logging import config
 
 from hoge.huga import Huga
