@@ -10,7 +10,7 @@ python = "^3.9"
 
 [tool.poetry.group.dev.dependencies]
 # lint
-black = "24.4.0"
+black = "24.4.1"
 ruff = "^0.4.1"
 
 # test
