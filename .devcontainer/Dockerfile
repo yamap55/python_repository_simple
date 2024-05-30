@@ -48,7 +48,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 USER $USERNAME
-ENV PATH "/home/$USERNAME/.poetry/bin:$PATH"
+ENV PATH "$HOME/.local/bin:$PATH"
 
 # poetry install
 ENV POETRY_VIRTUALENVS_IN_PROJECT=true
