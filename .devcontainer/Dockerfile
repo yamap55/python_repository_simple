@@ -26,7 +26,7 @@ RUN /bin/echo -e "\n\
 RUN rm -rf /var/lib/apt/lists/* \
     && apt-get update \
     && apt-get upgrade -y \
-    && apt-get -y --no-install-recommends install sudo vim tzdata less \
+    && apt-get -y --no-install-recommends install sudo vim tzdata less jq \
     && apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
