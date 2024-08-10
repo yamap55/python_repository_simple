@@ -29,6 +29,8 @@ omit = ["*/tests/*", "*/site-packages/*"]
 
 [tool.ruff]
 line-length = 100
+
+[tool.ruff.lint]
 select = ["E", "F", "W", "C90", "I", "D", "UP", "B", "Q"]
 # Rules to ignore:
 # D200 One-line docstring should fit on one line with quotes
@@ -42,13 +44,13 @@ select = ["E", "F", "W", "C90", "I", "D", "UP", "B", "Q"]
 ignore = ["D200", "D203", "D212", "D400", "D401", "D403", "D413", "D415"]
 exclude = ["__init__.py", "work", ".venv", ".git"]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "tests/*" = ["D"]
 
-[tool.ruff.mccabe]
+[tool.ruff.lint.mccabe]
 max-complexity = 10
 
-[tool.ruff.flake8-quotes]
+[tool.ruff.lint.flake8-quotes]
 inline-quotes = "double"
 multiline-quotes = "double"
 docstring-quotes = "double"
