@@ -54,3 +54,16 @@ max-complexity = 10
 inline-quotes = "double"
 multiline-quotes = "double"
 docstring-quotes = "double"
+
+[tool.pyright]
+reportMissingImports = true
+reportMissingTypeStubs = false
+reportImportCycles = true
+reportUnusedImport = true
+reportUnusedClass = true
+reportUnusedFunction = true
+reportUnusedVariable = true
+reportDuplicateImport = true
+pythonVersion = "3.12"
+pythonPlatform = "Linux"
+ignore = ["./work"]
