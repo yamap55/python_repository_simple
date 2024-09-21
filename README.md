@@ -7,13 +7,11 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 ## 内容
 
 - [devcontainer](https://code.visualstudio.com/docs/remote/containers)
-- lint
+- [Rye](https://rye.astral.sh/)
   - [ruff](https://beta.ruff.rs/docs/)
-  - [black](https://black.readthedocs.io/en/stable/)
-  - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
-  - [hadolint](https://github.com/hadolint/hadolint)
+- [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
+- [hadolint](https://github.com/hadolint/hadolint)
 - [pytest](https://docs.pytest.org/en/stable/)
-- [poetry](https://python-poetry.org/)
 - [GitHub Actions](https://github.co.jp/features/actions)
 - [logging](https://docs.python.org/ja/3/howto/logging.html)
 
@@ -48,7 +46,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
     - `.github/dependabot.yml`
     - `.github/workflows/auto_merge_depandabot.yml`
   - pyproject.toml
-    - `tool.poetry.name`, `tool.poetry.description`, `tool.poetry.authors`
+    - `project.name`, `project.description`, `project.authors`, `tool.hatch.build.targets.wheel`
 
 ### 開発手順
 
@@ -58,9 +56,14 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 4. しばらく待つ
    - 初回の場合コンテナー image の取得や作成が行われる
 5. 起動したら開発可能
+   - 初回起動時は `rye sync` を実行してください
 
-## ユニットテスト実行
+## NOTE
 
-```
-pytest
-```
+- ユニットテスト
+  - `rye test`
+- lint
+  - `rye lint`
+- format
+  - `rye format`
+  - `rye format --check`
