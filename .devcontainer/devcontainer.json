@@ -10,11 +10,11 @@
   // update Dockerfile with your user's UID/GID if not 1000.
   "remoteUser": "vscode",
   "features": {
-      // install the latest version of git
-      "ghcr.io/devcontainers/features/git:1": {
-          "version": "latest",
-          "ppa": "false"
-      }
+    // install the latest version of git
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    }
   },
   "customizations": {
     "vscode": {
@@ -27,18 +27,15 @@
             "path": "/bin/bash"
           }
         },
-        "black-formatter.args": ["--line-length", "100"],
-        "flake8.args": ["--config=.flake8"],
         "python.defaultInterpreterPath": "/project/.venv/bin/python",
         "python.pythonPath": "/project/.venv/bin/python",
-        "python.testing.unittestEnabled": false,
-        "python.testing.nosetestsEnabled": false,
         "python.testing.pytestEnabled": true,
         "python.analysis.diagnosticMode": "workspace",
-        "python.jediEnabled": false,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
         "ruff.showNotifications": "always",
+        // ruff.pathを指定することでVS Code拡張にバンドルされているruffではなくryeのruffを使用する
+        "ruff.path": ["/home/vscode/.rye/self/bin/ruff"],
         "vsintellicode.python.completionsEnabled": true,
         "vsintellicode.features.python.deepLearning": "enabled",
         "vsintellicode.modify.editor.suggestSelection": "enabled",
@@ -50,7 +47,7 @@
         "[python]": {
           "editor.tabSize": 4,
           "editor.formatOnPaste": false,
-          "editor.defaultFormatter": "ms-python.black-formatter"
+          "editor.defaultFormatter": "charliermarsh.ruff"
         },
         "[json]": {
           "editor.tabSize": 2
@@ -73,11 +70,9 @@
         "tamasfe.even-better-toml",
         "usernamehw.errorlens",
         "charliermarsh.ruff",
-        "ms-python.flake8",
-        "ms-python.black-formatter",
         "GitHub.copilot"
       ]
     }
   },
-  "postStartCommand": "pip install -U pip && poetry self update && poetry install --no-interaction"
+  "postStartCommand": "pip install -U pip && rye self update"
 }

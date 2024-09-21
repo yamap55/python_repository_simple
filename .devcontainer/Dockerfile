@@ -48,11 +48,19 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME
 
 USER $USERNAME
-ENV PATH "$HOME/.local/bin:$PATH"
+ENV HOME=/home/$USERNAME
+ENV PATH="${HOME}/.local/bin:${PATH}"
+ENV RYE_NO_AUTO_INSTALL=1
+ENV RYE_HOME="${HOME}/.rye"
+ENV UV_LINK_MODE=copy
 
-# poetry install
-ENV POETRY_VIRTUALENVS_IN_PROJECT=true
-RUN curl -sSL https://install.python-poetry.org | python -
+# install rye
+# hadolint ignore=SC1091
+RUN curl -sSf https://rye.astral.sh/get | RYE_INSTALL_OPTION="--yes" bash \
+    && echo "source \"${RYE_HOME}/env\"" >> ~/.profile \
+    && source "${RYE_HOME}/env" \
+    && mkdir -p ~/.local/share/bash-completion/completions \
+    && rye self completion > ~/.local/share/bash-completion/completions/rye.bash
 
 # terminal setting
 RUN wget --progress=dot:giga https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -O ~/.git-completion.bash \
