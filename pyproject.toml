@@ -1,24 +1,29 @@
-[tool.poetry]
+[project]
 name = "python_repository_simple"
 version = "0.0.0"
 description = "python_repository_simple"
-authors = ["yamap55 <1785817+yamap55@users.noreply.github.com>"]
-license = "Creative Commons CC0 1.0 Universal (CC0 1.0) Public Domain Dedication"
+authors = [
+    { name = "yamap55", email = "1785817+yamap55@users.noreply.github.com" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
 
-[tool.poetry.dependencies]
-python = "^3.9"
+requires-python = ">=3.12"
+dependencies = []
 
-[tool.poetry.group.dev.dependencies]
-# lint
-black = "24.8.0"
-ruff = "^0.6.6"
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
-# test
-pytest = "8.3.3"
-pytest-cov = "5.0.0"
+[tool.hatch.metadata]
+allow-direct-references = true
 
-# notebook
-ipykernel = "6.29.5"
+[tool.hatch.build.targets.wheel]
+packages = ["src/python_repository_simple"]
+
+[tool.rye]
+managed = true
+dev-dependencies = ["pytest>=8.3.3", "pytest-cov>=5.0.0", "ipykernel>=6.29.5"]
 
 [tool.pytest.ini_options]
 junit_family = "xunit1"
