@@ -1,0 +1,64 @@
+name: code-check
+
+on: [push]
+
+jobs:
+  code-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: eifinger/setup-rye@v4
+        id: setup-rye
+        with:
+          enable-cache: true
+          cache-prefix: "${{ runner.os }}-rye-${{ hashFiles('**/requirements.lock', '**/requirements-dev.lock') }}"
+      - name: Install dependencies
+        if: steps.setup-rye.outputs.cache-hit != 'true'
+        run: |
+          rye sync
+      - name: Set up reviewdog
+        uses: reviewdog/action-setup@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: 20.x
+      - name: Run lint check with reviewdog
+        id: lint
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rye lint 2>&1 | reviewdog \
+            -efm="%f:%l:%c: %t%*[^ ] %m" \
+            -efm="%-G%.%#" \
+            -name="rye-lint" \
+            -reporter=github-check \
+            -level=error \
+            -fail-on-error \
+            -filter-mode=nofilter
+        # 全てのチェックを行うため、失敗しても先に進ませる
+        continue-on-error: true
+      - name: Run format check with reviewdog
+        id: format
+        env:
+          REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          rye fmt --check 2>&1 | reviewdog \
+            -f=black \
+            -name="rye-format" \
+            -reporter=github-check \
+            -level=error \
+            -fail-on-error \
+            -filter-mode=nofilter
+      - name: Install pyright
+        run: npm install --global pyright
+      - name: Run type check
+        id: type-check
+        run: |
+          pyright
+        # 全てのチェックを行うため、失敗しても先に進ませる
+        continue-on-error: true
+      - name: Finalize and fail job on check failures
+        run: |
+          if [ "${{ steps.lint.outcome }}" == "failure" ] || [ "${{ steps.format.outcome }}" == "failure" ] || [ "${{ steps.type-check.outcome }}" == "failure" ]; then
+            exit 1
+          fi
