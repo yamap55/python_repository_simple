@@ -60,6 +60,8 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 
 ## NOTE
 
+- 実行
+  - `uv run main.py`
 - ユニットテスト
   - `rye test`
 - lint
