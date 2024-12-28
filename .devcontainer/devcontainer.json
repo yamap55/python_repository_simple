@@ -37,8 +37,8 @@
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
         "ruff.showNotifications": "always",
-        // ruff.pathを指定することでVS Code拡張にバンドルされているruffではなくryeのruffを使用する
-        "ruff.path": ["/home/vscode/.rye/self/bin/ruff"],
+        // ruff.pathを指定することでVS Code拡張にバンドルされているruffではなくuvのruffを使用する
+        "ruff.path": ["/home/vscode/.local/share/uv/tools/ruff/bin/ruff"],
         "vsintellicode.python.completionsEnabled": true,
         "vsintellicode.features.python.deepLearning": "enabled",
         "vsintellicode.modify.editor.suggestSelection": "enabled",
@@ -73,9 +73,10 @@
         "tamasfe.even-better-toml",
         "usernamehw.errorlens",
         "charliermarsh.ruff",
-        "GitHub.copilot"
+        "GitHub.copilot",
+        "GitHub.vscode-github-actions"
       ]
     }
-  },
-  "postStartCommand": "pip install -U pip && rye self update"
+  }
+//   "postStartCommand": "pip install -U pip"
 }

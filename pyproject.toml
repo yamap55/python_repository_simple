@@ -11,6 +11,11 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []
 
+[dependency-groups]
+dev = [
+ "ipykernel>=6.29.5",
+]
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -21,9 +26,8 @@ allow-direct-references = true
 [tool.hatch.build.targets.wheel]
 packages = ["src/python_repository_simple"]
 
-[tool.rye]
+[tool.uv]
 managed = true
-dev-dependencies = ["pytest>=8.3.3", "pytest-cov>=5.0.0", "ipykernel>=6.29.5"]
 
 [tool.pytest.ini_options]
 junit_family = "xunit1"
