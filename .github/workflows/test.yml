@@ -7,16 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: eifinger/setup-rye@v4
-        id: setup-rye
+      - name: Install uv
+        id: setup-uv
+        uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-          cache-prefix: "${{ runner.os }}-rye-${{ hashFiles('**/requirements.lock', '**/requirements-dev.lock') }}"
+          cache-dependency-glob: "uv.lock"
+      - name: Set up Python
+        run: uv python install 3.12
       - name: Install dependencies
-        if: steps.setup-rye.outputs.cache-hit != 'true'
+        if: steps.setup-uv.outputs.cache-hit != 'true'
         run: |
-          rye sync
+          uv sync
       - name: Run tests
         id: test
         run: |
-          rye test
+          uvx --with pytest-cov pytest

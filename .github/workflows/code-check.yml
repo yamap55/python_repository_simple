@@ -7,18 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: eifinger/setup-rye@v4
-        id: setup-rye
+      - name: Install uv
+        id: setup-uv
+        uses: astral-sh/setup-uv@v5
         with:
           enable-cache: true
-          cache-prefix: "${{ runner.os }}-rye-${{ hashFiles('**/requirements.lock', '**/requirements-dev.lock') }}"
+          cache-dependency-glob: "uv.lock"
+      - name: Set up Python
+        run: uv python install 3.12
       - name: Install dependencies
-        if: steps.setup-rye.outputs.cache-hit != 'true'
+        if: steps.setup-uv.outputs.cache-hit != 'true'
         run: |
-          rye sync
+          uv sync
       - name: Set up reviewdog
         uses: reviewdog/action-setup@v1
       - name: Use Node.js
+        # pyrightのためにNode.jsをインストール
         uses: actions/setup-node@v4.1.0
         with:
           node-version: 20.x
@@ -27,13 +31,13 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          rye lint 2>&1 | reviewdog \
+          uvx ruff check 2>&1 | reviewdog \
             -efm="%f:%l:%c: %t%*[^ ] %m" \
             -efm="%-G%.%#" \
-            -name="rye-lint" \
+            -name="uv-lint" \
             -reporter=github-check \
             -level=error \
-            -fail-on-error \
+            -fail-level=error \
             -filter-mode=nofilter
         # 全てのチェックを行うため、失敗しても先に進ませる
         continue-on-error: true
@@ -42,12 +46,12 @@ jobs:
         env:
           REVIEWDOG_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          rye fmt --check 2>&1 | reviewdog \
+          uvx ruff format --check 2>&1 | reviewdog \
             -f=black \
-            -name="rye-format" \
+            -name="uv-format" \
             -reporter=github-check \
             -level=error \
-            -fail-on-error \
+            -fail-level=error \
             -filter-mode=nofilter
       - name: Install pyright
         run: npm install --global pyright

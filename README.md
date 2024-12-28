@@ -7,7 +7,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 ## 内容
 
 - [devcontainer](https://code.visualstudio.com/docs/remote/containers)
-- [Rye](https://rye.astral.sh/)
+- [uv](https://docs.astral.sh/uv/)
   - [ruff](https://beta.ruff.rs/docs/)
 - [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance), [pyright](https://github.com/microsoft/pyright)
 - [hadolint](https://github.com/hadolint/hadolint)
@@ -56,14 +56,16 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 4. しばらく待つ
    - 初回の場合コンテナー image の取得や作成が行われる
 5. 起動したら開発可能
-   - 初回起動時は `rye sync` を実行してください
+   - 初回起動時は `uv sync` を実行してください
 
 ## NOTE
 
+- 実行
+  - `uv run main.py`
 - ユニットテスト
-  - `rye test`
+  - `uvx pytest`
 - lint
-  - `rye lint`
+  - `uvx ruff check`
 - format
-  - `rye format`
-  - `rye format --check`
+  - `uvx format`
+  - `uvx format --check`
