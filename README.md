@@ -31,9 +31,8 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - https://code.visualstudio.com/docs/devcontainers/containers#_using-a-credential-helper
 - 以下をプロジェクト名に合わせて変更
   - `.devcontainer/devcontainer.json`
-    - `name`, `service`
+    - `name`
   - `compose.yaml`
-    - `services` の Key 名
     - `image`, `container_name`
     - `env_file`
       - 環境変数を使用しない場合は除去
