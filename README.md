@@ -66,5 +66,5 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 - lint
   - `uvx ruff check`
 - format
-  - `uvx format`
-  - `uvx format --check`
+  - `uvx ruff format`
+  - `uvx ruff format --check`
