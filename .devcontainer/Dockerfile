@@ -61,8 +61,10 @@ RUN apt-get update \
     && ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python
 
 # pyright install
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
     && apt-get install --no-install-recommends -y nodejs \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* \
     && npm install --global pyright
 
 USER $USERNAME
