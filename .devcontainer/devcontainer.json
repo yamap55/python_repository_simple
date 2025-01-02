@@ -14,6 +14,16 @@
       "settings": {
         "chat.detectParticipant.enabled": true,
         "files.eol": "\n",
+        "files.exclude": {
+            "**/.git": true,
+            "**/.DS_Store": true,
+            "**/Thumbs.db": true,
+            "**/__pycache__": true,
+            ".pytest_cache": true,
+            ".coverage": true,
+            ".ruff_cache": true,
+            ".venv": true
+        },
         "files.insertFinalNewline": true,
         "files.trimTrailingWhitespace": true,
         "terminal.integrated.profiles.linux": {
