@@ -22,4 +22,4 @@ jobs:
       - name: Run tests
         id: test
         run: |
-          uvx --with pytest-cov pytest
+          uv run python -m pytest
