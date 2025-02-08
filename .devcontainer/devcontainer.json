@@ -40,7 +40,6 @@
         "python.analysis.inlayHints.functionReturnTypes": true,
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
-        "ruff.showNotifications": "always",
         // ruff.pathを指定することでVS Code拡張にバンドルされているruffではなくuvのruffを使用する
         "ruff.path": ["/home/vscode/.local/share/uv/tools/ruff/bin/ruff"],
         "vsintellicode.python.completionsEnabled": true,
