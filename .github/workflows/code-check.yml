@@ -58,7 +58,7 @@ jobs:
       - name: Run type check
         id: type-check
         run: |
-          pyright
+          uv run pyright
         # 全てのチェックを行うため、失敗しても先に進ませる
         continue-on-error: true
       - name: Finalize and fail job on check failures
