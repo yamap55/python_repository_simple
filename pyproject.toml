@@ -12,11 +12,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
-dev = [
- "ipykernel>=6.29.5",
- "pytest>=8.3.4",
- "pytest-cov>=6.0.0",
-]
+dev = ["ipykernel>=6.29.5", "pytest>=8.3.4", "pytest-cov>=6.0.0"]
 
 [build-system]
 requires = ["hatchling"]
@@ -33,7 +29,7 @@ managed = true
 
 [tool.pytest.ini_options]
 junit_family = "xunit1"
-addopts = "--verbose --cov --showlocals --durations=5"
+addopts = ["--verbose", "--cov", "--showlocals", "--durations=5"]
 
 [tool.coverage.run]
 omit = ["*/tests/*", "*/site-packages/*"]
