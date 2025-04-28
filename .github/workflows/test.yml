@@ -16,7 +16,6 @@ jobs:
       - name: Set up Python
         run: uv python install 3.12
       - name: Install dependencies
-        if: steps.setup-uv.outputs.cache-hit != 'true'
         run: |
           uv sync --extra dev
       - name: Run tests
