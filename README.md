@@ -69,3 +69,5 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 - format
   - `uvx ruff format`
   - `uvx ruff format --check`
+- 本番での依存ライブラリインストール
+  - `uv sync --no-dev`
