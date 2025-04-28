@@ -66,6 +66,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
     - `uvx pytest` の設定もしているが、uv環境で実装されないため、上記コマンドで実行する
 - lint
   - `uvx ruff check`
+  - `uvx ruff check --fix`
 - format
   - `uvx ruff format`
   - `uvx ruff format --check`
