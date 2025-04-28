@@ -17,7 +17,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 
 ## 環境詳細
 
-- Python : 3.12
+- Python : 3.13
 
 ### 事前準備
 

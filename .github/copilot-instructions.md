@@ -16,7 +16,7 @@
 
 ## Code Quality Requirements
 
-- Use Python 3.12.
+- Use Python 3.13.
 - Use Ruff for linting your code.
 - Use Ruff for formatting your code.
 - Use double quotes for strings.

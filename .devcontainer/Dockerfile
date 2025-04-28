@@ -48,7 +48,7 @@ RUN wget --progress=dot:giga https://github.com/hadolint/hadolint/releases/lates
 # ----------- Base setup complete -----------
 
 # Install Python
-ARG PYTHON_VERSION=3.12
+ARG PYTHON_VERSION=3.13
 RUN apt-get update \
     && apt-get install --no-install-recommends -y software-properties-common \
     && add-apt-repository -y ppa:deadsnakes/ppa \
