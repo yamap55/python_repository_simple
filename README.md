@@ -55,7 +55,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 4. しばらく待つ
    - 初回の場合コンテナー image の取得や作成が行われる
 5. 起動したら開発可能
-   - 初回起動時は `uv sync` を実行してください
+   - 初回起動時は `uv sync --extra dev` を実行してください
 
 ## NOTE
 
