@@ -1,10 +1,9 @@
 """main"""
 
-from logging import config
-
 from hoge.huga import Huga
+from logging_config import setup_logging
 
-config.fileConfig("logging.conf", disable_existing_loggers=False)
+setup_logging()
 
 if __name__ == "__main__":
     Huga().piyo()
