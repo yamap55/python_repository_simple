@@ -26,7 +26,6 @@ GitHub のリポジトリページの「Use this template」を押下して使�
 - VS Code の拡張機能「Remote - Containers」インストール
   - https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 - 本リポジトリの clone
-- `.env` ファイルを空ファイルでプロジェクト直下に作成
 - ssh-agent の設定
   - https://code.visualstudio.com/docs/devcontainers/containers#_using-a-credential-helper
 - 以下をプロジェクト名に合わせて変更
@@ -63,7 +62,7 @@ GitHub のリポジトリページの「Use this template」を押下して使�
   - `uv run main.py`
 - ユニットテスト
   - `uv run python -m pytest`
-    - `uvx pytest` の設定もしているが、uv環境で実装されないため、上記コマンドで実行する
+    - `uvx pytest` の設定もしているが、uv 環境で実装されないため、上記コマンドで実行する
 - lint
   - `uvx ruff check`
   - `uvx ruff check --fix`
