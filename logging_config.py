@@ -2,7 +2,6 @@
 
 import logging
 import logging.config
-import logging.handlers
 import sys
 
 LOGGING_CONFIG = {
