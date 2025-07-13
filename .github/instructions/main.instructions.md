@@ -1,3 +1,8 @@
+---
+description: "全てのファイルに適用される全ての挙動の大前提としてのルール"
+applyTo: "**"
+---
+
 ## Core Requirements
 
 - Use Japanese.
