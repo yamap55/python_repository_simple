@@ -41,9 +41,6 @@
         "python.analysis.typeCheckingMode": "basic",
         // ruff.pathを指定することでVS Code拡張にバンドルされているruffではなくuvのruffを使用する
         "ruff.path": ["/home/vscode/.local/share/uv/tools/ruff/bin/ruff"],
-        "vsintellicode.python.completionsEnabled": true,
-        "vsintellicode.features.python.deepLearning": "enabled",
-        "vsintellicode.modify.editor.suggestSelection": "enabled",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
           "source.organizeImports": "never",
