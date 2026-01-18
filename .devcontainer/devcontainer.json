@@ -70,7 +70,6 @@
         "njpwerner.autodocstring",
         "eamodio.gitlens",
         "ms-python.vscode-pylance",
-        "VisualStudioExptTeam.vscodeintellicode",
         "exiasr.hadolint",
         "tamasfe.even-better-toml",
         "usernamehw.errorlens",
