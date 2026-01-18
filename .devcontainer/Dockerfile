@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM mcr.microsoft.com/devcontainers/python:3.14-bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Asia/Tokyo
@@ -46,19 +46,6 @@ RUN wget --progress=dot:giga https://github.com/hadolint/hadolint/releases/lates
     && chmod +x /usr/local/bin/hadolint
 
 # ----------- Base setup complete -----------
-
-# Install Python
-ARG PYTHON_VERSION=3.14
-RUN apt-get update \
-    && apt-get install --no-install-recommends -y software-properties-common \
-    && add-apt-repository -y ppa:deadsnakes/ppa \
-    && apt-get update \
-    && apt-get install --no-install-recommends -y python${PYTHON_VERSION} python${PYTHON_VERSION}-dev \
-    && apt-get autoremove -y \
-    && apt-get clean -y \
-    && rm -rf /var/lib/apt/lists/* \
-    && ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python3 \
-    && ln -sf /usr/bin/python${PYTHON_VERSION} /usr/bin/python
 
 # pyright install
 RUN curl -fsSL https://deb.nodesource.com/setup_22.x | bash - \
